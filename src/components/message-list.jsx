@@ -10,7 +10,7 @@ export default function MessageList({ messages }) {
               "max-w-[80%] p-4 rounded-2xl backdrop-blur-md animate-fadeIn shadow-message",
               message.isUser
                 ? "bg-gradient-to-r from-purple-600/80 to-purple-900/80 text-white rounded-tr-none"
-                : "bg-black/40 border border-purple-500/30 text-white rounded-tl-none",
+                : "bg-black/40 border border-purple-500/30 text-white rounded-tl-none text-left",
             )}
           >
             {message.text}

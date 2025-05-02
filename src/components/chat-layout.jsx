@@ -26,23 +26,39 @@ export default function ChatLayout() {
     setIsLoggedIn(false)
   }
 
-  const handleSendMessage = (e) => {
-    e.preventDefault()
+  
+  const handleSendMessage = async (e) => {
+    e.preventDefault();
     if (input.trim()) {
       // Add user message
-      setMessages([...messages, { text: input, isUser: true }])
-      setInput("")
-
-      // Show loading indicator
-      setIsLoading(true)
-
-      // Simulate response (in a real app, this would be an API call)
-      setTimeout(() => {
-        setMessages((prev) => [...prev, { text: "Thanks for your message! This is a demo response.", isUser: false }])
-        setIsLoading(false)
-      }, 2000)
+      setMessages(prev => [...prev, { text: input, isUser: true }]);
+      setInput("");
+      setIsLoading(true);
+  
+      try {
+        const res = await fetch('https://chatnitkkr-production.up.railway.app/query', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question: input }) // Changed from 'input' to 'question'
+        });
+  
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+  
+        const data = await res.json(); // Moved inside try block
+        setMessages(prev => [...prev, { text: data.response, isUser: false }]);
+      } catch (error) {
+        setMessages(prev => [...prev, { 
+          text: `Error: ${error.message || 'Failed to get response'}`,
+          isUser: false 
+        }]);
+        console.error('API Error:', error);
+      } finally {
+        setIsLoading(false);
+      }
     }
-  }
+  };
 
   return (
     <div className="flex flex-col h-screen bg-black">

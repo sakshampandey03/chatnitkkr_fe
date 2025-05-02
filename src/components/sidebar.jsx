@@ -5,18 +5,16 @@ import { Separator } from "./ui/separator"
 export default function Sidebar() {
   // Sample college links
   const collegeLinks = [
-    { name: "NITKKR Homepage", icon: Home },
-    { name: "Academic Portal", icon: BookOpen },
-    { name: "Student Portal", icon: Users },
-    { name: "Library", icon: ExternalLink },
+    { name: "NITKKR Homepage", icon: Home, url : "https://nitkkr.ac.in/" },
+    { name: "Academic Notifications", icon: BookOpen, url : "https://nitkkr.ac.in/academic-notifications/" },
+    { name: "Hostels", icon: Users, url : "https://nitkkr.ac.in/iic-2/" },
+    { name: "Alumini", icon: ExternalLink, url : "https://nitkkr.ac.in/about-us-12/" },
   ]
 
   // Sample quick links
   const quickLinks = [
-    { name: "Bookmarks", icon: Bookmark },
-    { name: "Notifications", icon: Bell },
+    { name: "Contact Us", icon: Bell },
     { name: "Settings", icon: Settings },
-    { name: "Help Center", icon: HelpCircle },
   ]
 
   return (
@@ -27,6 +25,7 @@ export default function Sidebar() {
         <ul className="space-y-1">
           {collegeLinks.map((link, index) => (
             <li key={index}>
+              <a href={link.url}>
               <Button
                 variant="ghost"
                 className="w-full justify-start text-white/80 hover:text-white hover:bg-purple-500/10 transition-all"
@@ -34,6 +33,7 @@ export default function Sidebar() {
                 <link.icon className="mr-2 h-4 w-4" />
                 {link.name}
               </Button>
+              </a>
             </li>
           ))}
         </ul>
@@ -63,7 +63,7 @@ export default function Sidebar() {
       <div className="mt-auto">
         <div className="rounded-xl bg-gradient-to-br from-purple-600/20 to-purple-900/20 backdrop-blur-md p-4 border border-purple-500/20 shadow-purple">
           <h4 className="font-medium mb-2">Premium Features</h4>
-          <p className="text-sm text-white/70 mb-3">Unlock advanced features and priority support.</p>
+          <p className="text-sm text-white/70 mb-3">Get answers to unlimited queries</p>
           <Button
             size="sm"
             className="w-full bg-gradient-to-r from-purple-600 to-purple-900 hover:from-purple-700 hover:to-purple-800 text-white"

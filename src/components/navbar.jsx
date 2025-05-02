@@ -1,28 +1,28 @@
-"use client"
-
-import { LogOut, LogIn, User, ChevronDown } from "lucide-react"
+"use client";
+import logo from "../assets/logo.png"
+import { LogOut, LogIn, User, ChevronDown } from "lucide-react";
 // import { Button } from "./components/ui/button"
-import { Button } from "./ui/button"
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu"
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
+} from "./ui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 export default function Navbar({ isLoggedIn, user, onLogin, onLogout }) {
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-purple-900/80 to-black/80 backdrop-blur-md border-b border-purple-500/20 shadow-lg">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-purple-900 flex items-center justify-center mr-3 shadow-purple">
-            <span className="text-white font-bold">C</span>
-          </div>
-          <h1 className="text-2xl font-bold text-white tracking-tight">chatNITKKR</h1>
+          
+          <h1 className="text-2xl font-bold text-white tracking-tight">
+            chatNITKKR
+          </h1>
         </div>
-
+        {/* 
         <div>
           {isLoggedIn ? (
             <DropdownMenu>
@@ -70,8 +70,8 @@ export default function Navbar({ isLoggedIn, user, onLogin, onLogout }) {
               </Button>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </header>
-  )
+  );
 }
