@@ -36,7 +36,7 @@ export default function ChatLayout() {
       setIsLoading(true);
   
       try {
-        const res = await fetch('https://chatnitkkr-production.up.railway.app/query', {
+        const res = await fetch('https://chatnitkkr-backend.onrender.com/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ question: input }) // Changed from 'input' to 'question'
