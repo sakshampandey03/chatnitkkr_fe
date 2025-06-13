@@ -36,7 +36,7 @@ export default function ChatLayout() {
       setIsLoading(true);
   
       try {
-        const res = await fetch('https://chatnitkkr-backend.onrender.com/', {
+        const res = await fetch('https://chatnitkkr-backend.onrender.com/query', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ question: input }) // Changed from 'input' to 'question'
