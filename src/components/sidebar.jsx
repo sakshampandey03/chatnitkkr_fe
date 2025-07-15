@@ -63,7 +63,7 @@ export default function Sidebar() {
       <Separator className="bg-purple-500/20 my-4" />
 
       {/* Quick Links */}
-      <div className="mb-6">
+      {/* <div className="mb-6">
         <h3 className="text-sm font-medium text-purple-300 mb-3 uppercase tracking-wider">
           Quick Links
         </h3>
@@ -80,7 +80,7 @@ export default function Sidebar() {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       {/* Promo Card */}
       <div className="mt-auto">

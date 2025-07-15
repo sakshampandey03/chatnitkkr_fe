@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import homeview from "../assets/homeview.png"
+import homeview from "../assets/homeview.png";
 import {
   ArrowRight,
   MessageSquare,
@@ -163,124 +163,55 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-purple-500/20 backdrop-blur-md bg-black/40">
+      <footer className="py-12 border-t border-purple-500/20 backdrop-blur-md bg-black/40 relative">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="md:col-span-1">
-              <div className="flex items-center mb-4">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-600 to-purple-900 flex items-center justify-center mr-2">
-                  <span className="text-white font-bold text-sm">C</span>
-                </div>
-                <h3 className="text-xl font-bold text-white">chatNITKKR</h3>
+          <div className="flex flex-col items-center">
+            <div className="flex items-center mb-2">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-600 to-purple-900 flex items-center justify-center mr-2">
+                <span className="text-white font-bold text-sm">C</span>
               </div>
-              <p className="text-gray-400 text-sm">
-                The official chat platform for NIT Kurukshetra.
-              </p>
+              <h3 className="text-xl font-bold text-white">chatNITKKR</h3>
             </div>
+            <p className="text-gray-400 text-sm text-center max-w-md">
+              Unofficial AI assistant platform for NIT Kurukshetra students.
+            </p>
+          </div>
 
-            <div>
-              <h4 className="text-white font-semibold mb-4">Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    Terms of Service
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    Cookie Policy
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-4">Connect</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    Email: contact@nitkkr.ac.in
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    Phone: +91 1744 233XXX
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    NIT Kurukshetra, Haryana, India
-                  </a>
-                </li>
-              </ul>
-            </div>
+          {/* Hidden keyword block - offscreen SEO */}
+          <div
+            style={{
+              position: "absolute",
+              left: "-9999px",
+              top: "-9999px",
+              width: "1px",
+              height: "1px",
+              overflow: "hidden",
+            }}
+          >
+            ChatNITKKR is a free AI chatbot for NIT Kurukshetra students. Use
+            ChatNITKKR to access NIT Kurukshetra results, NIT KKR result portal,
+            and latest exam result notifications. This NIT Kurukshetra chatbot
+            helps with Samarth login, Samarth nitkkr support, and Samarth portal
+            login errors. Students of NIT KKR use this AI bot for syllabus
+            downloads, NIT Kurukshetra syllabus PDF, and course structure. From
+            BTech to MTech, all NIT Kurukshetra branches — CSE, ECE, Mechanical
+            — can use ChatNITKKR as a student academic assistant. Get placement
+            help, NIT Kurukshetra CSE average package info, and nitkkr placement
+            stats. Whether it’s NITK hostel info, nit kurukshetra academic
+            calendar, nit kurukshetra admission portal, or even nitkkr samarth
+            login stuck issues — ChatNITKKR AI assistant covers it. Works like a
+            nit kurukshetra student support bot, nit kkr smart chatbot,
+            unofficial academic nitkkr tool, and nit kurukshetra result checker.
+            Use nit kurukshetra chat assistant, chatbot for NIT KKR, or nitkkr
+            student chatbot to simplify your college life. Try ChatNITKKR now —
+            the AI-powered solution for NIT Kurukshetra campus needs.
           </div>
 
           <div className="border-t border-purple-500/20 mt-8 pt-8 text-center text-gray-400 text-sm">
             <p>
-              © {new Date().getFullYear()} chatNITKKR. All rights reserved.
-              National Institute of Technology, Kurukshetra.
+              © {new Date().getFullYear()} chatNITKKR. All rights reserved. Not
+              affiliated with the official National Institute of Technology,
+              Kurukshetra.
             </p>
           </div>
         </div>
